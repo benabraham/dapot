@@ -1,0 +1,53 @@
+{
+  "name": "MyFirstWebsite",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/benabraham/bs4-nodejs-static"
+  },
+  "main": "index.js",
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "bootstrap": "4.4.x",
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-csso": "^4.0.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-twig": "^1.2.0",
+    "postcss-flexbugs-fixes": "^4.2.0",
+    "postcss-uncss": "^0.17.0",
+    "prettier": "1.19.1",
+    "surge": "^0.21.3",
+    "uncss": "^0.17.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp develop",
+    "build": "gulp build",
+    "deploy": "gulp build && surge dist --domain \"https://my-first-website.surge.sh\""
+  },
+  "prettier": {
+    "tabWidth": 4,
+    "printWidth": 120
+  },
+  "author": "Daniel Srb",
+  "license": "MIT",
+  "description": "A basic template to start a website based on Bootstrap",
+  "dependencies": {},
+  "browserslist": [
+    ">= 1%",
+    "last 1 major version",
+    "not dead",
+    "Chrome >= 60",
+    "Firefox >= 60",
+    "Edge >= 15.15063",
+    "Explorer 11",
+    "iOS >= 10",
+    "Safari >= 10",
+    "Android >= 6",
+    "not ExplorerMobile <= 11"
+  ]
+}
