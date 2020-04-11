@@ -3,7 +3,7 @@ var gulp = require("gulp");
 
 var browserSync = require("browser-sync").create();
 var del = require("del");
-var sass = require("gulp-sass");
+var sass = require("gulp-dart-sass");
 var sourcemaps = require("gulp-sourcemaps");
 var postcss = require("gulp-postcss");
 var uncss = require("postcss-uncss");
@@ -106,6 +106,9 @@ gulp.task(
                 // set what files be served
                 server: {
                     baseDir: "dist", // serve from this folder
+                    open: false,
+                    ghostMode: false,
+                    reloadOnRestart: true,
                     serveStaticOptions: {
                         // trying an extension when one isn't specified:
                         // effectively means that http://localhost:3000/another-page

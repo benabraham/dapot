@@ -13,6 +13,7 @@
     "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-csso": "^4.0.1",
+    "gulp-dart-sass": "^1.0.0",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
@@ -27,7 +28,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp develop",
     "build": "gulp build",
-    "deploy": "gulp build && surge dist --domain \"https://my-first-website.surge.sh\""
+    "deploy": "gulp build && surge dist --domain \"https://dapot01.surge.sh\""
   },
   "prettier": {
     "tabWidth": 4,

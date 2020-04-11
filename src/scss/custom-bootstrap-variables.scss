@@ -1,3 +1,4 @@
+@use "sass:color";
 // Customize Bootstrap Variables here
 //
 // You can USE and override any variable from
@@ -75,7 +76,8 @@
     //        "900": $gray-900
     ); $grays: $grays !global;
     */
-    // $blue: #007bff; $blue: $blue !global; // #007bff
+
+    $blue: hsl(210, 50%, 20%); $blue: $blue !global; // #007bff
     // $indigo: #6610f2; $indigo: $indigo !global; // #6610f2
     // $purple: #6f42c1; $purple: $purple !global; // #6f42c1
     // $pink: #e83e8c; $pink: $pink !global; // #e83e8c
@@ -85,6 +87,17 @@
     // $green: #28a745; $green: $green !global; // #28a745
     // $teal: #20c997; $teal: $teal !global; // #20c997
     // $cyan: #17a2b8; $cyan: $cyan !global; // #17a2b8
+
+    $DA-blue:   color.scale(hsl(210, 89%, 85%),$lightness: 50%, $saturation: -15%);
+    $DA-yellow: color.scale(hsl(030, 73%, 83%),$lightness: 50%, $saturation: -15%);
+    $DA-green:  color.scale(hsl(200, 48%, 82%),$lightness: 50%, $saturation: -15%);
+    $DA-pink:   color.scale(hsl(331, 79%, 87%),$lightness: 50%, $saturation: -15%);
+
+
+    //$DA-blue: hsl(210, 79%, 85%);
+    //$DA-yellow: hsl(31, 63%, 83%);
+    //$DA-green: hsl(149, 38%, 82%);
+    //$DA-pink: hsl(331, 70%, 87%);
 
     // uncomment whole block, the following variable uses map-merge(),
     // so you can define only new ones you need
@@ -113,14 +126,18 @@
     // $info: $cyan; $info: $info !global; // $cyan
     // $warning: $yellow; $warning: $warning !global; // $yellow
     // $danger: $red; $danger: $danger !global; // $red
-    // $light: $gray-100; $light: $light !global; // $gray-100
+     $light: hsl(210, 5%, 96%); $light: $light !global; // $gray-100
     // $dark: $gray-800; $dark: $dark !global; // $gray-800
 
     // uncomment whole block, the following variable uses map-merge(),
     // so you can define only new ones you need
-    /*
     // stylelint-disable-next-line scss/dollar-variable-default
     $theme-colors: (
+        "black": $black,
+        "DA-blue": $DA-blue,
+        "DA-yellow": $DA-yellow,
+        "DA-green": $DA-green,
+        "DA-pink": $DA-pink,
     //        "primary": $primary,
     //        "secondary": $secondary,
     //        "success": $success,
@@ -130,7 +147,6 @@
     //        "light": $light,
     //        "dark": $dark
     ); $theme-colors: $theme-colors !global;
-    */
 
     // Set a specific jump point for requesting color jumps
     // $theme-color-interval: 8%; $theme-color-interval: $theme-color-interval !global; // 8%
@@ -168,7 +184,7 @@
     // $enable-grid-classes: true; $enable-grid-classes: $enable-grid-classes !global; // true
     // $enable-pointer-cursor-for-buttons: true; $enable-pointer-cursor-for-buttons: $enable-pointer-cursor-for-buttons !global; // true
     // $enable-print-styles: true; $enable-print-styles: $enable-print-styles !global; // true
-    // $enable-responsive-font-sizes: false; $enable-responsive-font-sizes: $enable-responsive-font-sizes !global; // false
+    $enable-responsive-font-sizes: true; $enable-responsive-font-sizes: $enable-responsive-font-sizes !global; // false
     // $enable-validation-icons: true; $enable-validation-icons: $enable-validation-icons !global; // true
     // $enable-deprecation-messages: true; $enable-deprecation-messages: $enable-deprecation-messages !global; // true
 
@@ -182,7 +198,6 @@
     // $spacer: 1rem; $spacer: $spacer !global; // 1rem
     // uncomment whole block, the following variable uses map-merge(),
     // so you can define only new ones you need
-    /*
     // stylelint-disable-next-line scss/dollar-variable-default
     $spacers: (
     //        0: 0,
@@ -191,8 +206,8 @@
     //        3: $spacer,
     //        4: ($spacer * 1.5),
     //        5: ($spacer * 3)
+            6: ($spacer * 6)
     ); $spacers: $spacers !global;
-    */
 
     // This variable affects the `.h-*` and `.w-*` classes.
     // uncomment whole block, the following variable uses map-merge(),
@@ -221,7 +236,7 @@
     // Style anchor elements.
 
     // $link-color: theme-color("primary"); $link-color: $link-color !global; // theme-color("primary")
-    // $link-decoration: none; $link-decoration: $link-decoration !global; // none
+    $link-decoration: underline; $link-decoration: $link-decoration !global; // none
     // $link-hover-color: darken($link-color, 15%); $link-hover-color: $link-hover-color !global; // darken($link-color, 15%)
     // $link-hover-decoration: underline; $link-hover-decoration: $link-hover-decoration !global; // underline
     // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
@@ -273,7 +288,7 @@
     // Set the number of columns and specify the width of the gutters.
 
     // $grid-columns: 12; $grid-columns: $grid-columns !global; // 12
-    // $grid-gutter-width: 30px; $grid-gutter-width: $grid-gutter-width !global; // 30px
+    $grid-gutter-width: 80px; $grid-gutter-width: $grid-gutter-width !global; // 30px
     // $grid-row-columns: 6; $grid-row-columns: $grid-row-columns !global; // 6
 
     // Components
@@ -323,12 +338,13 @@
     // Font, line-height, and color for body text, headings, and more.
 
     // stylelint-disable value-keyword-case
-    // $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; $font-family-sans-serif: $font-family-sans-serif !global; // -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
-    // $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; $font-family-monospace: $font-family-monospace !global; // SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
-    // $font-family-base: $font-family-sans-serif; $font-family-base: $font-family-base !global; // $font-family-sans-serif
+    $DA-font-family-serif: "IBM Plex Serif" ,serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; $DA-font-family-serif: $DA-font-family-serif !global;
+    $font-family-sans-serif: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; $font-family-sans-serif: $font-family-sans-serif !global; // -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+    $font-family-monospace: "IBM Plex Mono",SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; $font-family-monospace: $font-family-monospace !global; // SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+    $font-family-base: $font-family-sans-serif; $font-family-base: $font-family-base !global; // $font-family-sans-serif
     // stylelint-enable value-keyword-case
 
-    // $font-size-base: 1rem; $font-size-base: $font-size-base !global; // 1rem // Assumes the browser default, typically `16px`
+    $font-size-base: 1.1rem; $font-size-base: $font-size-base !global; // 1rem // Assumes the browser default, typically `16px`
     // $font-size-lg: $font-size-base * 1.25; $font-size-lg: $font-size-lg !global; // $font-size-base * 1.25
     // $font-size-sm: $font-size-base * .875; $font-size-sm: $font-size-sm !global; // $font-size-base * .875
 
@@ -339,7 +355,7 @@
     // $font-weight-bolder: bolder; $font-weight-bolder: $font-weight-bolder !global; // bolder
 
     // $font-weight-base: $font-weight-normal; $font-weight-base: $font-weight-base !global; // $font-weight-normal
-    // $line-height-base: 1.5; $line-height-base: $line-height-base !global; // 1.5
+    $line-height-base: 1.6; $line-height-base: $line-height-base !global; // 1.5
 
     // $h1-font-size: $font-size-base * 2.5; $h1-font-size: $h1-font-size !global; // $font-size-base * 2.5
     // $h2-font-size: $font-size-base * 2; $h2-font-size: $h2-font-size !global; // $font-size-base * 2
@@ -348,10 +364,10 @@
     // $h5-font-size: $font-size-base * 1.25; $h5-font-size: $h5-font-size !global; // $font-size-base * 1.25
     // $h6-font-size: $font-size-base; $h6-font-size: $h6-font-size !global; // $font-size-base
 
-    // $headings-margin-bottom: $spacer / 2; $headings-margin-bottom: $headings-margin-bottom !global; // $spacer / 2
-    // $headings-font-family: null; $headings-font-family: $headings-font-family !global; // null
-    // $headings-font-weight: 500; $headings-font-weight: $headings-font-weight !global; // 500
-    // $headings-line-height: 1.2; $headings-line-height: $headings-line-height !global; // 1.2
+     $headings-margin-bottom: $spacer; $headings-margin-bottom: $headings-margin-bottom !global; // $spacer / 2
+     $headings-font-family: $font-family-monospace; $headings-font-family: $headings-font-family !global; // null
+     $headings-font-weight: 400; $headings-font-weight: $headings-font-weight !global; // 500
+     $headings-line-height: 1.1; $headings-line-height: $headings-line-height !global; // 1.2
     // $headings-color: null; $headings-color: $headings-color !global; // null
 
     // $display1-size: 6rem; $display1-size: $display1-size !global; // 6rem
@@ -365,8 +381,8 @@
     // $display4-weight: 300; $display4-weight: $display4-weight !global; // 300
     // $display-line-height: $headings-line-height; $display-line-height: $display-line-height !global; // $headings-line-height
 
-    // $lead-font-size: $font-size-base * 1.25; $lead-font-size: $lead-font-size !global; // $font-size-base * 1.25
-    // $lead-font-weight: 300; $lead-font-weight: $lead-font-weight !global; // 300
+    $lead-font-size: $font-size-base * 1.4; $lead-font-size: $lead-font-size !global; // $font-size-base * 1.25
+    $lead-font-weight: 300; $lead-font-weight: $lead-font-weight !global; // 300
 
     // $small-font-size: 80%; $small-font-size: $small-font-size !global; // 80%
 
@@ -741,8 +757,8 @@
 
     // Navs
 
-    // $nav-link-padding-y: .5rem; $nav-link-padding-y: $nav-link-padding-y !global; // .5rem
-    // $nav-link-padding-x: 1rem; $nav-link-padding-x: $nav-link-padding-x !global; // 1rem
+     $nav-link-padding-y: $spacer; $nav-link-padding-y: $nav-link-padding-y !global; // .5rem
+     $nav-link-padding-x: 2*$spacer; $nav-link-padding-x: $nav-link-padding-x !global; // 1rem
     // $nav-link-disabled-color: $gray-600; $nav-link-disabled-color: $nav-link-disabled-color !global; // $gray-600
 
     // $nav-tabs-border-color: $gray-300; $nav-tabs-border-color: $nav-tabs-border-color !global; // $gray-300
@@ -763,10 +779,10 @@
 
     // Navbar
 
-    // $navbar-padding-y: $spacer / 2; $navbar-padding-y: $navbar-padding-y !global; // $spacer / 2
-    // $navbar-padding-x: $spacer; $navbar-padding-x: $navbar-padding-x !global; // $spacer
+     //$navbar-padding-y: $spacer / 2; $navbar-padding-y: $navbar-padding-y !global; // $spacer / 2
+     $navbar-padding-x: 0; $navbar-padding-x: $navbar-padding-x !global; // $spacer
 
-    // $navbar-nav-link-padding-x: .5rem; $navbar-nav-link-padding-x: $navbar-nav-link-padding-x !global; // .5rem
+    $navbar-nav-link-padding-x: $spacer; $navbar-nav-link-padding-x: $navbar-nav-link-padding-x !global; // .5rem
 
     // $navbar-brand-font-size: $font-size-lg; $navbar-brand-font-size: $navbar-brand-font-size !global; // $font-size-lg
     // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link

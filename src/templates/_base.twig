@@ -4,53 +4,88 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="index.css">
-    <title>{% block title %}Dapot – Účtovníctvo a ekonomické poradenstvo{% endblock %}</title>
+    <title>{% block title %}DAPOT – Účtovníctvo a ekonomické poradenstvo{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Serif:wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="container">
 
-    <nav class="navbar navbar-expand navbar-light bg-light">
-        <div class="navbar-brand">
-            <a href="/">Dapot</a> <small>Účtovníctvo a ekonomické poradenstvo</small>
+<div class="bg-black sticky-top">
+    <div class="container-lg">
+        <nav class="navbar navbar-expand navbar-dark flex-wrap">
+            <div class="navbar-brand text-wrap mr-4">
+                <a href="/" class="display-1 text-white text-decoration-none font-weight-bold">DAPOT</a>
+                <br><small class="mt-n2 d-block text-nowrap">účtovníctvo a ekonomické poradenstvo</small>
+            </div>
+
+            <ul class="navbar-nav ml-md-auto mr-md-n4 mr-lg-n5 mt-auto flex-wrap">
+                <li class="nav-item">
+                    <a class="nav-link pl-0" href="/">Úvod</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/sluzby">Služby</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/cennik">Cenník</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/referencie">Referencie</a>
+                </li>
+                <li class="nav-item d-md-none">
+                    <a class="nav-link pr-0" href="#kontakty">Kontakty</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<div class="{% block color %}bg-light{% endblock %}">
+    <div class="container-lg">
+        <div class="row">
+            <div class="col-sm-8 py-5 d-flex align-items-center" style="min-height: 14rem">
+                <h1 class="my-0 text-black">
+                    {% block heading %}{% endblock %}
+                </h1>
+            </div>
+
+            <div class="col-sm d-none d-sm-block" style="background-size:{% block background_size %}contain{% endblock %} ;background-position: 50% 100%;background-repeat: no-repeat; background-image: url(/img/{% block image %}{% endblock %});"></div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-lg" id="kontakty">
+    <div class="row pb-5">
+        <div class="col-md-8 pt-5">
+            {% block content %}{% endblock %}
         </div>
 
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="/">Úvod</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/sluzby">Služby</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/cennik">Cenník</a>
-            </li>
-        </ul>
-    </nav>
+        <div class="col-md bg-light py-4">
 
+            <h2>Kontakty</h2>
 
-    {% block content %}{% endblock %}
+            <p>
 
-    <h2>Kontakt</h2>
+                telefón: <a href="tel:00420317020385" class="text-nowrap">+421&thinsp;31&thinsp;702&thinsp;0385</a><br>
+                mobil: <a href="tel:00421905580138" class="text-nowrap">+421&thinsp;905&thinsp;580&thinsp;138</a><br>
+                e-mail: <a href="mailto:beata@dapot.sk">beata@dapot.sk</a>
+            </p>
 
-    <p>
-        <b>DAPOT, s.r.o.</b><br>
-        Nemocničná 605/25<br>
-        924 01 Galanta
-    </p>
+            <p><b>Osobné stretnutie doporučujeme dohodnúť telefonicky.</b></p>
 
-    <p>
-        IČO: 36221708<br>
-        DIČ: 2021360803
-    </p>
+            <p>
+                <b>DAPOT, s.r.o.</b><br>
+                Nemocničná&nbsp;605/25<br>
+                924&nbsp;01 Galanta<br>
+                <a href="https://www.google.com/maps/place/Nemocni%C4%8Dn%C3%A1+25,+924+01+Galanta,+Slovakia/@48.1970425,17.7248922,17z/">mapa</a>
+            </p>
 
-    <p>
-        pevná linka: <a href="tel:00317020385">+31 702 0385</a><br>
-        mobil: <a href="tel:00421903580138">+421 903 580 138</a><br>
-        e-mail: <a href="mailto:beata@dapot.sk">beata@dapot.sk</a>
-    </p>
-
-    <p><b>Osobné stretnutie doporučujeme dohodnúť telefonicky.</b></p>
+            <p>
+                IČO: 36221708<br>
+                DIČ: 2021360803
+            </p>
+        </div>
+    </div>
 </div>
 
 {#
