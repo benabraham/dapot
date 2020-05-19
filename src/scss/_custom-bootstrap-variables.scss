@@ -128,7 +128,7 @@
     // $info: $cyan; $info: $info !global; // $cyan
     // $warning: $yellow; $warning: $warning !global; // $yellow
     // $danger: $red; $danger: $danger !global; // $red
-     $light: hsl(210, 5%, 96%); $light: $light !global; // $gray-100
+    $light: hsl(210, 5%, 96%); $light: $light !global; // $gray-100
     // $dark: $gray-800; $dark: $dark !global; // $gray-800
 
     // uncomment whole block, the following variable uses map-merge(),
@@ -169,6 +169,8 @@
     //        ("<","%3c"),
     //        (">","%3e"),
     //        ("#","%23"),
+    //        ("(","%28"),
+    //        (")","%29"),
     ); $escaped-characters: $escaped-characters !global;
     */
 
@@ -208,7 +210,7 @@
     //        3: $spacer,
     //        4: ($spacer * 1.5),
     //        5: ($spacer * 3)
-            6: ($spacer * 6)
+        6: ($spacer * 6)
     ); $spacers: $spacers !global;
 
     // This variable affects the `.h-*` and `.w-*` classes.
@@ -365,10 +367,10 @@
     // $h5-font-size: $font-size-base * 1.25; $h5-font-size: $h5-font-size !global; // $font-size-base * 1.25
     // $h6-font-size: $font-size-base; $h6-font-size: $h6-font-size !global; // $font-size-base
 
-     $headings-margin-bottom: $spacer; $headings-margin-bottom: $headings-margin-bottom !global; // $spacer / 2
-     $headings-font-family: $font-family-monospace; $headings-font-family: $headings-font-family !global; // null
-     $headings-font-weight: 400; $headings-font-weight: $headings-font-weight !global; // 500
-     $headings-line-height: 1.1; $headings-line-height: $headings-line-height !global; // 1.2
+    $headings-margin-bottom: $spacer; $headings-margin-bottom: $headings-margin-bottom !global; // $spacer / 2
+    $headings-font-family: $font-family-monospace; $headings-font-family: $headings-font-family !global; // null
+    $headings-font-weight: 400; $headings-font-weight: $headings-font-weight !global; // 500
+    $headings-line-height: 1.1; $headings-line-height: $headings-line-height !global; // 1.2
     // $headings-color: null; $headings-color: $headings-color !global; // null
 
     // $display1-size: 6rem; $display1-size: $display1-size !global; // 6rem
@@ -758,8 +760,8 @@
 
     // Navs
 
-     $nav-link-padding-y: $spacer; $nav-link-padding-y: $nav-link-padding-y !global; // .5rem
-     $nav-link-padding-x: 2*$spacer; $nav-link-padding-x: $nav-link-padding-x !global; // 1rem
+    $nav-link-padding-y: $spacer; $nav-link-padding-y: $nav-link-padding-y !global; // .5rem
+    $nav-link-padding-x: 2*$spacer; $nav-link-padding-x: $nav-link-padding-x !global; // 1rem
     // $nav-link-disabled-color: $gray-600; $nav-link-disabled-color: $nav-link-disabled-color !global; // $gray-600
 
     // $nav-tabs-border-color: $gray-300; $nav-tabs-border-color: $nav-tabs-border-color !global; // $gray-300
@@ -780,8 +782,8 @@
 
     // Navbar
 
-     //$navbar-padding-y: $spacer / 2; $navbar-padding-y: $navbar-padding-y !global; // $spacer / 2
-     $navbar-padding-x: 0; $navbar-padding-x: $navbar-padding-x !global; // $spacer
+    //$navbar-padding-y: $spacer / 2; $navbar-padding-y: $navbar-padding-y !global; // $spacer / 2
+    $navbar-padding-x: 0; $navbar-padding-x: $navbar-padding-x !global; // $spacer
 
     $navbar-nav-link-padding-x: $spacer; $navbar-nav-link-padding-x: $navbar-nav-link-padding-x !global; // .5rem
 
@@ -847,6 +849,8 @@
     // $dropdown-item-padding-x: 1.5rem; $dropdown-item-padding-x: $dropdown-item-padding-x !global; // 1.5rem
 
     // $dropdown-header-color: $gray-600; $dropdown-header-color: $dropdown-header-color !global; // $gray-600
+    // $dropdown-header-padding: $dropdown-padding-y $dropdown-item-padding-x; $dropdown-header-padding: $dropdown-header-padding !global; // $dropdown-padding-y $dropdown-item-padding-x
+
 
 
     // Pagination
@@ -1194,7 +1198,7 @@
     // $displays: none, inline, inline-block, block, table, table-row, table-cell, flex, inline-flex; $displays: $displays !global; // none, inline, inline-block, block, table, table-row, table-cell, flex, inline-flex
     // $overflows: auto, hidden; $overflows: $overflows !global; // auto, hidden
     // $positions: static, relative, absolute, fixed, sticky; $positions: $positions !global; // static, relative, absolute, fixed, sticky
-
+    // $user-selects: all, auto, none; $user-selects: $user-selects !global; // all, auto, none
 
     // Printing
 
