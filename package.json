@@ -28,7 +28,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp develop",
     "build": "gulp build",
-    "deploy": "gulp build && surge dist --domain \"https://dapot02.surge.sh\""
+    "deploy": "gulp build && surge dist --domain \"https://dapot04.surge.sh\""
   },
   "prettier": {
     "tabWidth": 4,
