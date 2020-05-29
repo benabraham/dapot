@@ -28,6 +28,11 @@
     <meta name="og:site_name" content="DAPOT – Účtovníctvo a ekonomické poradenstvo">
     <meta name="og:locale" content="{% block lang %}sk{% endblock %}">
     <meta name="og:type" content="website">
+    <link rel="{% block prefetch_index %}prefetch{% endblock %}" href="/img/kalkulacka.png" as="image" media="(min-width: 576px)">
+    <link rel="{% block prefetch_services %}prefetch{% endblock %}" href="/img/kocky.png" as="image" media="(min-width: 576px)">
+    <link rel="{% block prefetch_pricelist %}prefetch{% endblock %}" href="/img/prasca.png" as="image" media="(min-width: 576px)">
+    <link rel="{% block prefetch_testimonials %}prefetch{% endblock %}" href="/img/podpis.jpg" as="image" media="(min-width: 576px)">
+
 </head>
 <body>
 
@@ -50,7 +55,7 @@
                 <li class="nav-item {% block menu_active_pricelist %}{% endblock %}">
                     <a class="nav-link py-2 py-lg-0" href="/cennik">Cenník</a>
                 </li>
-                <li class="nav-item {% block menu_active_references %}{% endblock %}">
+                <li class="nav-item {% block menu_active_testimonials %}{% endblock %}">
                     <a class="nav-link py-2 py-lg-0" href="/referencie">Referencie</a>
                 </li>
                 <li class="nav-item d-lg-none">
