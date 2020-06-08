@@ -32,7 +32,17 @@
     <link rel="{% block prefetch_services %}prefetch{% endblock %}" href="/img/kocky.png" as="image" media="(min-width: 576px)">
     <link rel="{% block prefetch_pricelist %}prefetch{% endblock %}" href="/img/prasca.png" as="image" media="(min-width: 576px)">
     <link rel="{% block prefetch_testimonials %}prefetch{% endblock %}" href="/img/podpis.jpg" as="image" media="(min-width: 576px)">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168831662-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag("js", new Date());
+        gtag("config", "UA-168831662-1");
+    </script>
 </head>
 <body>
 
