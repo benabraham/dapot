@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/benabraham/dapot"
+    "url": "https://github.com/starenka/dapot"
   },
   "main": "index.js",
   "devDependencies": {
