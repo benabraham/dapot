@@ -83,18 +83,12 @@ h4,
         }
 
         &-referencie {
-            background-image: url(/img/podpis.jpg);
-            background-size: cover;
+            background-image: url(/img/palec.png);
         }
     }
 
     @include media-breakpoint-up('md') {
         background-size: contain;
-
-        &-referencie {
-            background-size: cover;
-            background-origin: border-box;
-        }
     }
 }
 
