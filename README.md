@@ -87,12 +87,14 @@ See `browserslist` in `package.json` for supported browsers.
 
 Upload everything in `/dist/` folder to the server.
 
-#### Surge.sh
+#### Production
 
-You can use [surge.sh](https://surge.sh) free service for that.
+Starenka manually triggers deploy script.
 
-1. If you don’t have a surge account: run surge client with `npx surge` in `/dist` folder to create it.
-1. Set your own domain in `package.json`.
-1. From now on run `npm run deploy` whenever you want to publish a new version.
+#### Preview (Surge.sh)
 
-If you want multiple people to be able to deploy to the same domain, run `surge --add mail.your.collaborator.used.to.register.with.surge@example.com` for each.
+For previews you can use [surge.sh](https://surge.sh) free service.
+
+Domain is set in `package.json`.
+
+Run `npm run deploy` whenever you want to publish a new preview version.
