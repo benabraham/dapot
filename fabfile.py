@@ -11,7 +11,6 @@ env.roledefs = {'production': ['starenka@galanta-uctovnictvo.sk']}
 def deploy():
     BRANCH = 'master'
     APP_DIR = '/www/galanta-uctovnictvo.sk'
-    NODENV_CMD = '~/.nodenv/bin/nodenv'
     NPM_CMD = '~/.nodenv/shims/npm'
 
     with cd(APP_DIR):
